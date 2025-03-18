@@ -1,0 +1,38 @@
+ion-content{
+  --background:#d36e70!important;
+ }
+ ion-col {
+   background-color:#f5cecd ;
+   border: solid 1px #fff;
+   color: #fff;
+   text-align: center;
+ }
+
+.col-content{
+  background-color:#fff ;
+  border: solid 1px #fff;
+  color: #000;
+  text-align: center;
+  border: solid 1px #f5cecd;
+}
+
+ .text-pink{
+   color: #873253;
+ }
+
+ .bg-pink{
+   background-color:#f5cecd ;
+ }
+
+.form-style ion-input{
+  border-bottom:solid 1px  #000;
+
+}
+
+.form-style div{
+   margin-bottom:1rem;
+}
+.container{
+  max-width: 500px !important;
+}
+

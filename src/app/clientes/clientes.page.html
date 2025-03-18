@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <nav class=" bg-pink navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="rounded-circle"
+          src="assets/icon/biblioteca.png" alt="Elingon"
+          style="width: 50px; height: auto;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Bienvenido a la
+              biblioteca *Usuario*</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Libros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Prestamos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Historial</a></li>
+              <li><a class="dropdown-item" href="#">Crear</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Eliminados</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search"
+            placeholder="busca un libro..." aria-label="Search">
+          <button class="btn btn-outline-danger" type="submit">Busqueda</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</ion-header>class="col-content"
+<ion-content class="ion-content" [fullscreen]="true">
+  <div class="container bg-white text-dark text-center h-100 rounded-5 mb-3">
+    <div class="bot-agregar">
+      <ion-button >  Agregar</ion-button>
+    </div>
+    <h1 class=" text-pink pt-3 ">Clientes</h1>
+    <ion-grid class="grid-example">
+      <ion-row class="header-row">
+        <ion-col>Nombre</ion-col>
+        <ion-col>Apellido</ion-col>
+        <ion-col>Cedula</ion-col>
+        <ion-col>Domicilio</ion-col>
+        <ion-col>Numero de telefono</ion-col>
+      </ion-row>
+       <ion-row *ngFor="let cliente of infoClientes; let i = index">
+        <ion-col class="col-content">{{cliente.nombre}}</ion-col>
+        <ion-col class="col-content">{{cliente.apellido}} </ion-col>
+        <ion-col class="col-content">{{cliente.cedula}} </ion-col>
+        <ion-col class="col-content">{{cliente.domicilio}} </ion-col>
+        <ion-col class="col-content">{{cliente.numero}} </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

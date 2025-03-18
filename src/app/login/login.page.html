@@ -1,0 +1,23 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="d-flex align-items-center justify-content-center vh-100" >
+    <div
+      class="container bg-white text-dark  p-5  rounded-5 mb-3 align-middle shadow-lg ">
+      <form class="form-style" (ngSubmit)="enviar()" [formGroup]="login">
+        <div>
+          <ion-input label="Nombre:" formControlName="nombre"></ion-input>
+        </div>
+        <div>
+          <ion-input label="Password:" formControlName="clave" type="password">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </div>
+        <div class="text-center mt-3">
+          <ion-button expand="full" type="submit">Enviar</ion-button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</ion-content>
