@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginPage implements OnInit {
     {nombre:'Juan',clave:'12345678'}
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.login = this.fb.group({
       nombre: ['', Validators.required],
       clave: ['', Validators.required]
@@ -34,8 +35,9 @@ export class LoginPage implements OnInit {
 
 
         if (usuarioValido) {
-          this.mensajeLogin = 'Inicio de sesión exitoso ✅';
+          this.mensajeLogin = '';
           console.log('Usuario válido');
+          this.router.navigate(['/home'])
         } else {
           this.mensajeLogin = 'Nombre o contraseña incorrectos ❌';
           console.log('Error: usuario no válido');
@@ -43,4 +45,3 @@ export class LoginPage implements OnInit {
       }
 
       }
-

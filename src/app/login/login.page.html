@@ -1,9 +1,6 @@
-
-
 <ion-content [fullscreen]="true">
-  <div class="d-flex align-items-center justify-content-center vh-100" >
-    <div
-      class="container bg-white text-dark  p-5  rounded-5 mb-3 align-middle shadow-lg ">
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="container bg-white text-dark  p-5  rounded-5 mb-3 align-middle shadow-lg ">
       <form class="form-style" (ngSubmit)="enviar()" [formGroup]="login">
         <div>
           <ion-input label="Nombre:" formControlName="nombre"></ion-input>
@@ -18,6 +15,12 @@
         </div>
 
       </form>
+
+      <!-- ✅ Mensaje de error dinámico -->
+      <div *ngIf="mensajeLogin" class="text-danger text-center mt-2">
+        <ion-text color="danger"><strong>{{ mensajeLogin }}</strong></ion-text>
+      </div>
+
     </div>
   </div>
 </ion-content>
