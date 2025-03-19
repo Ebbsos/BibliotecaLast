@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <nav class=" bg-pink navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="rounded-circle"
+      <a class="navbar-brand" href="home"><img class="rounded-circle"
           src="assets/icon/biblioteca.png" alt="Elingon"
           style="width: 50px; height: auto;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -14,7 +14,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Bienvenido a la
-              biblioteca *Usuario*</a>
+              biblioteca {{usuarioNombre}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="home">Home</a>
@@ -26,15 +26,15 @@
             <a class="nav-link" href="libros">Libros</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button"
+            <a class="nav-link dropdown-toggle" href="home" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Prestamos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Historial</a></li>
-              <li><a class="dropdown-item" href="#">Crear</a></li>
+              <li><a class="dropdown-item" href="home">Historial</a></li>
+              <li><a class="dropdown-item" href="home">Crear</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Eliminados</a></li>
+              <li><a class="dropdown-item" href="home">Eliminados</a></li>
             </ul>
           </li>
 
@@ -42,8 +42,10 @@
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search"
             placeholder="busca un libro..." aria-label="Search">
-          <button class="btn btn-outline-danger" type="submit">Busqueda</button>
+          <button class="btn btn-outline-danger me-5" type="submit">Busqueda</button>
         </form>
+
+        <button class="btn btn-danger ms-5" type="submit" (click)="logout()" >CERRAR SESION</button>
       </div>
     </div>
   </nav>

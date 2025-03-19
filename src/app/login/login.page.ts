@@ -37,6 +37,7 @@ export class LoginPage implements OnInit {
         if (usuarioValido) {
           this.mensajeLogin = '';
           console.log('Usuario válido');
+          localStorage.setItem('usuario',JSON.stringify(usuarioValido))
           this.router.navigate(['/home'])
         } else {
           this.mensajeLogin = 'Nombre o contraseña incorrectos ❌';
