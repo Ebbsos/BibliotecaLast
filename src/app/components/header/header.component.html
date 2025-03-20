@@ -20,7 +20,8 @@
             <a class="nav-link active" aria-current="page" href="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="clientes">Clientes</a>
+            <a class="nav-link active" aria-current="page"
+              href="clientes">Clientes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="libros">Libros</a>
@@ -42,10 +43,17 @@
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search"
             placeholder="busca un libro..." aria-label="Search">
-          <button class="btn btn-outline-danger me-5" type="submit">Busqueda</button>
+          <button class="btn btn-outline-danger me-5 gap-2 d-flex align-items-center" type="submit">
+            <ion-icon name="search-outline" class="fs-4"> </ion-icon>
+            <span>Busqueda</span>
+          </button>
         </form>
 
-        <button class="btn btn-danger ms-5" type="submit" (click)="logout()" >CERRAR SESION</button>
+        <button class="btn btn-danger ms-5 d-flex align-items-center gap-2"
+          type="button" (click)="logout()">
+          <ion-icon name="exit-outline" class="fs-4"></ion-icon>
+          <span>CERRAR SESIÓN</span>
+        </button>
       </div>
     </div>
   </nav>

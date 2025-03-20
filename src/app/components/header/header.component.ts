@@ -10,10 +10,12 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Input() titulo: string = 'Biblioteca';
   usuarioNombre: string | null = 'usuario';
+
   ngOnInit() {
     this.cargarUsuario();
   }
   constructor(private router: Router) { }
+
   cargarUsuario() {
     const usuarioGuardado = localStorage.getItem('usuario');
     if (usuarioGuardado) {
