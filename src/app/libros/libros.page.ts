@@ -20,7 +20,7 @@ export class LibrosPage implements OnInit {
   ngOnInit() {}
   listarLibros() {
     // una vez que usamos la funion getCollectionChanges estamos recibiendo el observable que nos da los datos internamente,
-    this.FirestoreService.getCollectionChanges<librosI>('libro').subscribe(
+    this.FirestoreService.getCollectionChanges<librosI>('libros').subscribe(
       (data) => {
         // con subscribe Cada vez que llegan datos nuevos (o se actualiza la colección), esta función se ejecuta.
         // data es el valor que el observable emite(los datos que tiene la collecion pero las tenemos internamente)
@@ -46,17 +46,22 @@ export class LibrosPage implements OnInit {
     console.log('editando el libro', libro);
   }
   async delete(libro: librosI) {
-    await this.FirestoreService.deleteDocumentID('libro', libro.id);
+    await this.FirestoreService.deleteDocumentID('libros', libro.id);
     console.log('Eliminando el libro', libro);
   }
   async save() {
     //si es un nuevo producto osea no tiene ID, le asignamos uno nuevo
     if (!this.newlibro.id) {
       this.newlibro.id = this.FirestoreService.createIdDoc();
+      await this.FirestoreService.createDocumentID(
+        this.newlibro,
+        'libros',
+        this.newlibro.id
+      );
     } else {
       await this.FirestoreService.updateDocument(
         this.newlibro,
-        'libro',
+        'libros',
         this.newlibro.id
       );
     }
