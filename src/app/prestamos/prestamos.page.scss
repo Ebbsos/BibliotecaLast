@@ -63,3 +63,25 @@
 --background: #873253!important;
   --color: white !important;
 }
+ion-datetime.date-input {
+  max-width: 250px;
+  margin: auto;
+  --min-height: 40px;
+  font-size: 14px;
+}
+
+::ng-deep ion-modal.custom-datepicker {
+  --width: 300px;
+  --height: auto;
+  --border-radius: 16px;
+  --box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+  --background: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep ion-modal.custom-datepicker ion-datetime {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}

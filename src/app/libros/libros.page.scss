@@ -11,7 +11,7 @@
      color: #fff;
      text-align: center;
    }
-  
+
   .col-content{
     background-color:#fff ;
     border: solid 1px #fff;
@@ -19,22 +19,49 @@
     text-align: center;
     border: solid 1px #f5cecd;
   }
-  
+
    .text-pink{
      color: #873253;
    }
-  
+
    .bg-pink{
      background-color:#f5cecd ;
    }
-  
+
   .menu-rosa{
     background-color: #873253;
   }
   .bot-agregar {
     text-align: left;
   }
-  
+
   .bot-agregar{
     margin-right: 400px;
   }
+
+  .boton-guardar {
+--background: #873253!important;
+  --color: white !important;
+}
+
+.fondo-form {
+  background-color: #f5cecd !important; /* rosita claro */
+  color: #000; /* texto negro */
+  border-radius: 16px;
+  padding: 10px;
+}
+.fondo-form ion-item {
+  --background: #f5cecd !important;
+  --color: #000 !important;
+}
+
+
+
+  .boton-editar {
+--background: #873253!important;
+  --color: white !important;
+}
+.boton-eliminar {
+--background: #873253!important;
+  --color: white !important;
+}

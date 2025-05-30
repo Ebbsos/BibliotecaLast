@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div
+      class="container bg-white text-dark  p-5  rounded-5 mb-3 align-middle shadow-lg ">
+      <h1>Registro de Usuario</h1>
+      <form class="form-style" (ngSubmit)="registrar()" [formGroup]="registrarUsuarios">
+        <div>
+          <ion-input label="Nombre: " formControlName="name"></ion-input>
+        </div>
+        <div>
+          <ion-input label="Correo: " type="text"
+            formControlName="email"></ion-input>
+        </div>
+        <div>
+          <ion-input label="Password: " type="text" formControlName="password">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </div>
+        <div class="text-center mt-3">
+          <ion-button [disabled]="registrarUsuarios.invalid"  expand="full" type="submit">Registrar</ion-button>
+        </div>
+         <div class="text-center mt-3">
+          <a href="/login-new" expand="full" style="cursor: pointer;">Iniciar Sesion</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</ion-content>

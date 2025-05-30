@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Auth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+import { signOut } from 'firebase/auth';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +11,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
 }
